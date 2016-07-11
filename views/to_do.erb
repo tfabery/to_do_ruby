@@ -1,0 +1,9 @@
+<h2><%= @list.name %></h2>
+
+<ul>
+  <% Task.all(@list.id).each do |task| %>
+    <li><%= task.description%>, due by: <%=task.due_date%> </li>
+  <%end%>
+</ul>
+
+<a href="/list/<%= @list.id %>/task/new" id="add_task"><button type="button">Add a Task</button></a>

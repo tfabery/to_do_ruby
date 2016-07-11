@@ -1,0 +1,6 @@
+<form action="/list/<%= @list.id %>" method="post">
+  <input type="hidden" name="id" value="<%= @list.id %>">
+  <input type="text" name="description">
+  <input type="date" name="due_date">
+  <button type="submit" name="submit">Add</button>
+</form>
